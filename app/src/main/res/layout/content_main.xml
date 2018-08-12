@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="547dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:text="Mad Lib"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            tools:ignore="RtlCompat" />
+
+        <EditText
+            android:id="@+id/txtAnimal"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCont"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="Enter big animal eg. cow"
+            tools:ignore="RtlCompat" />
+
+        <EditText
+            android:id="@+id/txtVerb"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAnimal"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="Enter past verb eg. went"
+            tools:ignore="RtlCompat" />
+
+        <EditText
+            android:id="@+id/txtCont"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="Enter small container eg box"
+            tools:ignore="RtlCompat" />
+
+
+        <EditText
+            android:id="@+id/txtEat"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtVerb"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="Enter sth to eat animal eg soup"
+            tools:ignore="RtlCompat" />
+
+        <EditText
+            android:id="@+id/txtStory"
+            android:layout_width="277dp"
+            android:layout_height="193dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="26dp"
+            android:layout_marginStart="43dp"
+            android:ems="10"
+            android:inputType="text"
+            tools:ignore="RtlCompat" />
+
+        <Button
+            android:id="@+id/btnStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="238dp"
+            android:text="Make story" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
