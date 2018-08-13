@@ -1,8 +1,7 @@
 package com.example.marta.madlibsandro;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -12,16 +11,22 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-private EditText txtAnimal;
-private EditText txtCont;
-private  EditText txtEat;
-private  EditText txtVerb;
-private Button btnStory;
-private EditText txtStory;
+    public EditText txtAnimal;
+    public EditText txtCont;
+    public EditText txtEat;
+    public EditText txtVerb;
+    public Button btnStory;
+    public EditText txtStory;
 
-    public void make () {
-        String story = "";
-        story = "Once upon a time \n there was a "+ txtAnimal+ " princess \n who" +txtVerb+ "in a"  +  txtEat +" "+ txtCont  ;
+    public void make() {
+        String animal = txtAnimal.getText().toString();
+        String verb = txtVerb.getText().toString();
+        String eat = txtEat.getText().toString();
+        String cont = txtCont.getText().toString();
+
+
+        String story = "Once upon a time there was a\n" + animal + " princess " +
+                " who " + verb + " in a " + eat + " " + cont;
 
         txtStory.setText(story);
 
@@ -32,20 +37,19 @@ private EditText txtStory;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        txtAnimal=(EditText)findViewById(R.id.txtAnimal) ;
-        txtCont=(EditText)findViewById(R.id.txtCont) ;
-        txtEat=(EditText)findViewById(R.id.txtCont) ;
-        txtVerb=(EditText)findViewById(R.id.txtVerb) ;
+        txtAnimal = (EditText) findViewById(R.id.txtAnimal);
+        txtCont = (EditText) findViewById(R.id.txtCont);
+        txtEat = (EditText) findViewById(R.id.txtEat);
+        txtVerb = (EditText) findViewById(R.id.txtVerb);
         txtStory = (EditText) findViewById(R.id.txtStory);
-        btnStory = (Button)findViewById(R.id.btnStory);
-       btnStory.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {make();
+        btnStory = (Button) findViewById(R.id.btnStory);
+        btnStory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                make();
 
-           }
-       });
-
-
+            }
+        });
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
